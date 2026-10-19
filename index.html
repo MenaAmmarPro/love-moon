@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Moon for Mena — the same moon, always</title>
+  <meta name="description" content="The moon above Karach&iacute; and Bucharest &mdash; live phase, illumination, tonight's crescent or full moon, and a countdown to the next one. Made for Mena.">
+  <meta name="theme-color" content="#090b20">
+  <meta property="og:title" content="Moon for Mena — the same moon, always">
+  <meta property="og:description" content="Live moon phase, illumination and a countdown to the next full and new moon. Made for Mena.">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://menaammarpro.github.io/love-moon/">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body data-page="moon">
+  <canvas id="starfield" aria-hidden="true"></canvas>
+
+  <header class="site-header">
+    <a class="brand" href="https://menaammarpro.github.io/">&#9829; Mena &amp; Ammar</a>
+    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">Menu</button>
+    <nav class="nav-links" aria-label="Main">
+      <a href="https://menaammarpro.github.io/">All projects</a>
+      <a href="https://menaammarpro.github.io/love-starmap/">Star map</a>
+      <a href="https://menaammarpro.github.io/love-timezone/">Same sky</a>
+      <div class="nav-more">
+        <button class="nav-more-toggle" type="button" aria-expanded="false">More <span class="caret" aria-hidden="true">&#9662;</span></button>
+        <div class="nav-more-menu">
+          <a href="https://menaammarpro.github.io/love-nature/">Our garden</a>
+          <a href="https://menaammarpro.github.io/love-countdown/">Countdown</a>
+          <a href="https://menaammarpro.github.io/love-memory-jar/">Memory jar</a>
+          <a href="https://menaammarpro.github.io/loveformymena/">Letters</a>
+        </div>
+      </div>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme">Theme</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">Tonight above us</p>
+      <h1>The <span>moon</span> for Mena</h1>
+      <p class="hero-description">You in Bucharest, me in Karach&iacute; &mdash; two cities, one moon.
+        Here it is, exactly as it is right now, and counting down to the next full one.</p>
+    </section>
+
+    <section class="moon-stage">
+      <div class="moon-figure">
+        <canvas id="moon-canvas" class="moon-canvas" width="280" height="280" role="img"
+          aria-label="The current phase of the moon"></canvas>
+        <p id="selected-label" class="selected-label">&nbsp;</p>
+      </div>
+
+      <div class="moon-readout">
+        <h2 id="phase-name" class="phase-name">&mdash;</h2>
+        <p id="phase-message" class="phase-message">&nbsp;</p>
+        <dl class="moon-facts">
+          <div class="fact">
+            <dt>Illuminated</dt>
+            <dd id="phase-illum">&mdash;</dd>
+          </div>
+          <div class="fact">
+            <dt>Moon age</dt>
+            <dd id="phase-age">&mdash;</dd>
+          </div>
+          <div class="fact">
+            <dt>Trend</dt>
+            <dd id="phase-wax">&mdash;</dd>
+          </div>
+        </dl>
+        <div class="date-control">
+          <label for="date-input">See another night</label>
+          <input id="date-input" type="date" class="date-input">
+          <button id="today-btn" class="button" type="button">Tonight</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="countdown-row">
+      <article class="countdown-card">
+        <p class="countdown-kicker">Next full moon</p>
+        <p id="full-countdown" class="countdown-time">&mdash;</p>
+        <p id="full-date" class="countdown-date">&nbsp;</p>
+      </article>
+      <article class="countdown-card">
+        <p class="countdown-kicker">Next new moon</p>
+        <p id="new-countdown" class="countdown-time">&mdash;</p>
+        <p id="new-date" class="countdown-date">&nbsp;</p>
+      </article>
+    </section>
+
+    <section class="panel">
+      <h2>What comes next</h2>
+      <ul id="next-list" class="next-list">
+        <li class="next-item">Loading&hellip;</li>
+      </ul>
+    </section>
+
+    <section class="panel">
+      <h2>The eight faces</h2>
+      <div id="phase-strip" class="phase-strip" aria-hidden="true"></div>
+      <ul class="phase-legend">
+        <li><strong>New</strong> &middot; the start of a cycle</li>
+        <li><strong>First quarter</strong> &middot; growing to half</li>
+        <li><strong>Full</strong> &middot; the whole face lit</li>
+        <li><strong>Last quarter</strong> &middot; fading back to new</li>
+      </ul>
+    </section>
+
+    <section class="panel note-panel">
+      <h2>Why the moon</h2>
+      <p>Because it is the one thing we both have at the very same moment. When it is
+        full here in Karach&iacute;, it is full over Bucharest too &mdash; no delay, no distance,
+        just the same quiet light. That is how it always feels with you, Mena.</p>
+      <p class="note-sign">Always, Ammar <span aria-hidden="true">&#9829;</span></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Made with love, just for you <span aria-hidden="true">&#9829;</span></p>
+    <p class="footer-small">Ammar &rarr; Mena &middot; Karach&iacute; &rarr; Bucharest</p>
+  </footer>
+
+  <script src="js/theme-main.js" defer></script>
+  <script src="js/effects.js" defer></script>
+  <script src="js/app.js" defer></script>
+</body>
+</html>
