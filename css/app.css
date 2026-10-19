@@ -1,0 +1,258 @@
+/* love-moon — page styles on top of the shared love theme */
+
+main {
+  width: min(960px, calc(100% - 40px));
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  padding-bottom: 3rem;
+}
+
+.hero {
+  min-height: auto;
+  text-align: center;
+  padding: 2.6rem 1rem 0;
+}
+
+.hero .eyebrow {
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  color: var(--pink);
+  margin: 0 0 0.4rem;
+}
+
+.hero h1 { margin: 0 0 0.5rem; }
+.hero h1 span { color: var(--pink); }
+
+.hero-description {
+  margin: 0 auto;
+  max-width: 34rem;
+  color: var(--muted);
+}
+
+/* ---------- moon stage ---------- */
+
+.moon-stage {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 2rem;
+  align-items: center;
+  padding: 1.4rem;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: var(--panel);
+  box-shadow: var(--shadow);
+}
+
+.moon-figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.moon-canvas {
+  width: min(280px, 70vw);
+  height: min(280px, 70vw);
+  display: block;
+}
+
+.selected-label {
+  font-size: 0.82rem;
+  color: var(--muted);
+  margin: 0;
+}
+
+.moon-readout h2 {
+  margin: 0 0 0.3rem;
+}
+
+.phase-name {
+  font-size: 1.7rem;
+  color: var(--text);
+}
+
+.phase-message {
+  margin: 0 0 1rem;
+  color: var(--muted);
+  min-height: 2.6em;
+}
+
+.moon-facts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.6rem;
+  margin: 0 0 1.1rem;
+}
+
+.fact {
+  background: var(--bg-soft);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 0.6rem 0.5rem;
+  text-align: center;
+}
+
+.fact dt {
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.fact dd {
+  margin: 0.2rem 0 0;
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--text);
+}
+
+.date-control {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.date-control label {
+  font-size: 0.82rem;
+  color: var(--muted);
+  width: 100%;
+}
+
+.date-input {
+  font: inherit;
+  padding: 0.5rem 0.7rem;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: var(--bg-soft);
+  color: var(--text);
+}
+
+/* ---------- countdowns ---------- */
+
+.countdown-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.countdown-card {
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 1.1rem 1.2rem;
+  background: radial-gradient(ellipse at 80% 0%, rgba(255, 159, 207, 0.12), transparent 60%), var(--panel);
+  text-align: center;
+}
+
+.countdown-kicker {
+  margin: 0;
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--pink);
+}
+
+.countdown-time {
+  margin: 0.5rem 0 0.3rem;
+  font-size: clamp(1.3rem, 4vw, 1.9rem);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: var(--text);
+}
+
+.countdown-date {
+  margin: 0;
+  font-size: 0.82rem;
+  color: var(--muted);
+  min-height: 1.2em;
+}
+
+/* ---------- panels ---------- */
+
+.panel {
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 1.3rem 1.5rem;
+  background: var(--panel);
+  box-shadow: var(--shadow);
+}
+
+.panel h2 {
+  margin: 0 0 0.8rem;
+  font-size: 1.15rem;
+}
+
+.next-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.next-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 0.6rem 0.8rem;
+  border-radius: 14px;
+  background: var(--bg-soft);
+  border: 1px solid var(--line);
+}
+
+.next-name { font-weight: 600; color: var(--text); }
+.next-when { font-size: 0.85rem; color: var(--muted); text-align: right; }
+
+.phase-strip {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.3rem;
+  margin-bottom: 1rem;
+}
+
+.strip-item {
+  font-size: clamp(1.3rem, 4vw, 1.9rem);
+  line-height: 1;
+  opacity: 0.42;
+  filter: grayscale(0.6);
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.strip-item.is-active {
+  opacity: 1;
+  filter: none;
+  transform: scale(1.25);
+}
+
+.phase-legend {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.35rem 1rem;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.phase-legend strong { color: var(--text); }
+
+.note-panel p { color: var(--muted); margin: 0 0 0.7rem; }
+.note-panel .note-sign { color: var(--text); margin: 0; }
+
+@media (max-width: 720px) {
+  .moon-stage { grid-template-columns: 1fr; text-align: center; }
+  .date-control { justify-content: center; }
+  .date-control label { text-align: center; }
+}
+
+@media (max-width: 480px) {
+  .countdown-row { grid-template-columns: 1fr; }
+  .phase-legend { grid-template-columns: 1fr; }
+  .moon-facts { grid-template-columns: repeat(3, 1fr); }
+}
