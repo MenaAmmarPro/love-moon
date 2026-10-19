@@ -1,0 +1,12 @@
+{
+  "name": "Moon for Mena — the same moon, always",
+  "short_name": "Moon for Mena",
+  "description": "The live moon phase above Karachi and Bucharest, with a countdown to the next full and new moon.",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#090b20",
+  "theme_color": "#090b20",
+  "icons": [
+    { "src": "assets/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}

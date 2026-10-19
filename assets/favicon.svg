@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Moon for Mena">
+  <defs>
+    <radialGradient id="moon" cx="38%" cy="34%" r="78%">
+      <stop offset="0%" stop-color="#fffdf6"/>
+      <stop offset="100%" stop-color="#d7d1e6"/>
+    </radialGradient>
+  </defs>
+  <circle cx="32" cy="32" r="25" fill="url(#moon)"/>
+  <circle cx="44" cy="25" r="23.5" fill="#090b20"/>
+  <circle cx="32" cy="32" r="25" fill="none" stroke="#ff9fcf" stroke-width="1.4" opacity="0.5"/>
+</svg>
